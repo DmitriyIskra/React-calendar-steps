@@ -1,0 +1,22 @@
+.wr-distance {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.distance {
+    width: 193px;
+    height: 46px;
+
+    font-size: 18px;
+    text-align: center;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.distanceInvalid {
+    border: 2px solid red;
+    color: red;
+}

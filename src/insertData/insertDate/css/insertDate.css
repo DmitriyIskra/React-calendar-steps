@@ -1,0 +1,22 @@
+.wr-date {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.date {
+    width: 193px;
+    height: 46px;
+
+    font-size: 18px;
+    text-align: center;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.dateInvalid {
+    border: 2px solid red;
+    color: red;
+}

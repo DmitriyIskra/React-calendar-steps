@@ -1,0 +1,25 @@
+.data-board-item {
+    display: flex;
+    padding: 0 20px;
+}
+
+.data-item {
+    flex-grow: 1;
+}
+
+.data-item-distance {
+    padding-right: 35px;
+
+    text-align: right;
+}
+
+.data-item-control {
+    display: flex;
+    gap: 10px;
+
+    justify-content: flex-end;
+}
+
+.data-item-control div {
+    cursor: pointer;
+}
