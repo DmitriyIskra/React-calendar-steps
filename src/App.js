@@ -18,7 +18,7 @@ function App() {
 
   // Функция добавления данных
   const addData = (data) => {
-    let arr = state;
+    let arr = [...state];
 
     // преобразуем формат даты
     data.date = data.date.split('.');
@@ -32,15 +32,14 @@ function App() {
     const resultSome = arr.some( item => item.date === data.date )
     
     if(resultSome) {
-      let arr2 = [...state];
-      arr2.forEach( item => {
+      arr.forEach( item => {
         if(item.date === data.date) {
           item.distance = +item.distance + +data.distance;
         }
       })
       
-      setState(arr2);
-      console.log(state)
+      setState(arr);
+
       return;
     }
 
