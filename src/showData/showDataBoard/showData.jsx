@@ -6,25 +6,6 @@ export default function ShowData(props) {
 
     const { data, callback } = props;
 
-    let arrDate = [];
-
-    // сортируем по дате
-    data.forEach( item => {
-        arrDate.push(item.date);
-    })
-
-    const sortedDate = arrDate.sort();
-    
-    arrDate = [];
-
-    sortedDate.forEach( i => {
-        data.forEach( j => {
-            if(i === j.date) {
-                arrDate.push(j);
-            }
-        } )
-    } )
-
     const handleClick = (e) => {
         if(e.target.matches('.delete')) {
             const el = e.target.closest('.data-board-item');
@@ -43,7 +24,7 @@ export default function ShowData(props) {
             <li className="show-data-item">Действия</li>
         </ul>
         <ul className="data-board" onClick={handleClick}>
-            {arrDate.reverse().map( item => {
+            {data.map( item => {
                 return item.date ? <ShowDataItem key={item.date} item={item}  /> : '';
             } )}
         </ul>
